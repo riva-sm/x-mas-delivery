@@ -1,0 +1,11 @@
+/* ======================  LOGO ====================== */
+
+.logo {
+  width: 164px;
+  height: 76px;
+  color: var(--one-color);
+}
+
+.logo__second {
+  color: var(--main-color);
+}
