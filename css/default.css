@@ -21,8 +21,8 @@
 }
 
 *,
-*::beforem,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -49,10 +49,17 @@ h2 {
   color: var(--main-color);
   letter-spacing: 0.01em;
 }
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 
 .container {
-  max-width: 1290px;
+  max-width: 1390px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 
 .hide {
@@ -79,4 +86,24 @@ button {
 button,
 input {
   font: inherit;
+}
+
+/* ======================  RESPONSIVE ====================== */
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 42px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 39px;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding: 0 10px;
+  }
 }
