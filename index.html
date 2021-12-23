@@ -37,6 +37,14 @@
     <link rel="stylesheet" href="css//option-pay.css" />
     <!-- ======================  FOOTER ====================== -->
     <link rel="stylesheet" href="css/footer.css" />
+    <!-- ======================  OVERLAY ====================== -->
+    <link rel="stylesheet" href="css/overlay.css" />
+    <!-- ======================  MODAL ====================== -->
+    <link rel="stylesheet" href="css/modal.css" />
+    <!-- ======================  BURGER JS ====================== -->
+    <script src="js/burger.js" defer></script>
+    <!-- ======================  MODAL JS ====================== -->
+    <script src="js/modal.js" defer></script>
 
     <style>
       :root {
@@ -71,7 +79,7 @@
         <button class="burger header__burger">
           <span class="burger__line"></span>
         </button>
-        <nav class="header__navigation navigation active">
+        <nav class="header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link" href="#one">Пихта Фразера</a>
@@ -159,7 +167,10 @@
               для рождества
             </p>
             <div class="product__button-wrapper">
-              <button class="product__button product__button_order">
+              <button
+                class="product__button product__button_order"
+                data-order="Пихта Фразера"
+              >
                 Заказать</button
               ><a href="#" class="product__button product__button_more"
                 >Подробнее</a
@@ -191,7 +202,10 @@
               крона
             </p>
             <div class="product__button-wrapper">
-              <button class="product__button product__button_order">
+              <button
+                class="product__button product__button_order"
+                data-order="Русская ель"
+              >
                 Заказать</button
               ><a href="#" class="product__button product__button_more"
                 >Подробнее</a
@@ -221,7 +235,10 @@
               совершенно не колючая и мягкая как трава
             </p>
             <div class="product__button-wrapper">
-              <button class="product__button product__button_order">
+              <button
+                class="product__button product__button_order"
+                data-order="Сибирская пихта"
+              >
                 Заказать</button
               ><a href="#" class="product__button product__button_more"
                 >Подробнее</a
@@ -407,7 +424,99 @@
         </div>
       </div>
     </footer>
-
+    <!-- ======================  MODAL ====================== -->
+    <div class="overlay overlay_order">
+      <div class="modal">
+        <button class="modal__close">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <h2 class="modal__title">Оформить заказ</h2>
+        <form
+          class="modal__form"
+          action="https://jsonplaceholder.typicode.com/posts"
+          method="post"
+        >
+          <label class="form__label">
+            <span class="modal__label-text">ФИО</span>
+            <input
+              class="modal__input"
+              type="text"
+              placeholder="Введите ваше ФИО"
+              name="bio"
+              required
+            />
+          </label>
+          <label class="form__label form__label-end">
+            <span class="modal__label-text">Телефон</span>
+            <input
+              class="modal__input"
+              type="tel"
+              placeholder="Введите ваш номер телефона"
+              name="tel"
+              required
+            />
+          </label>
+          <input class="modal__order" type="hidden" name="order" />
+          <button class="modal__button">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
+    <div class="overlay overlay_consultation">
+      <div class="modal">
+        <button class="modal__close">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <h2 class="modal__title">Записаться на консультацию</h2>
+        <form
+          class="modal__form"
+          action="https://jsonplaceholder.typicode.com/posts"
+          method="post"
+        >
+          <label class="form__label">
+            <span class="modal__label-text">ФИО</span>
+            <input
+              class="modal__input"
+              type="text"
+              placeholder="Введите ваше ФИО"
+              name="name"
+              required
+            />
+          </label>
+          <label class="form__label form__label-end">
+            <span class="modal__label-text">Телефон</span>
+            <input
+              class="modal__input"
+              type="tel"
+              placeholder="Введите ваш номер телефона"
+              name="phone"
+              required
+            />
+          </label>
+          <input class="modal__consultation" type="hidden" name="order" />
+          <button class="modal__button">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
     <svg class="hide">
       <symbol
         id="logo"
